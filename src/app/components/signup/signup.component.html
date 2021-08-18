@@ -1,8 +1,47 @@
 <div class="container">
 
-   <div class="left">
+   <div class="img-wrapper">
+      <img src="../../../assets/img/jq2.jpg" alt="Jota Quest">
    </div>
+
    <div class="rigth">
+
+      <h1>Novo Cadastro</h1>
+
+      <mat-form-field appearance="outline">
+         <mat-label>Nome</mat-label>
+         <input type="text" matInput placeholder="Ex.. Fulado da Silva">
+         <mat-icon matSuffix>drive_file_rename_outline</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+         <mat-label>CPF</mat-label>
+         <input type="text" matInput placeholder="Ex.. 000.000.000-00">
+         <mat-icon matSuffix>fingerprint</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+         <mat-label>Telefone</mat-label>
+         <input type="text" matInput placeholder="Ex.. (99) 99999-9999">
+         <mat-icon matSuffix>phone_android</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+         <mat-label>E-mail</mat-label>
+         <input type="text" matInput placeholder="Ex.. fulano@email.com">
+         <mat-icon matSuffix>mail_outline</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+         <mat-label>Senha</mat-label>
+         <input type="password" matInput placeholder="Ex.. 123456">
+         <mat-icon matSuffix>password</mat-icon>
+      </mat-form-field>
+
+
+      <button id="btn_entrar" class="mat-elevation-z2" mat-flat-button color="primary">Cadastrar</button>
+      <button mat-stroked-button class="mat-elevation-z2" color="warn">Cancelar</button>
+
    </div>
 
 </div>
