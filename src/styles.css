@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import '../node_modules/ngx-toastr/toastr.css';
 
 html, body { 
    height: 100%;
@@ -7,4 +8,3 @@ html, body {
  }
  
  body { margin: 0; font-family: Montserrat, "Helvetica Neue", sans-serif; }
-

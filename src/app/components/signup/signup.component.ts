@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tostr: ToastrService) { }
 
-  ngOnInit(): void {
+  name:     FormControl = new FormControl(null, Validators.required)
+  cpf:      FormControl = new FormControl(null, Validators.required)
+  phone:    FormControl = new FormControl(null, Validators.required)
+  mail:     FormControl = new FormControl(null, Validators.email)
+  password: FormControl = new FormControl(null, Validators.required)
+
+  ngOnInit(): void {}
+
+  validFields(): void {
+    if(this.name.invalid || this.cpf.invalid || this.phone.invalid
+      || this.mail.invalid || this.password.invalid) {
+        this.tostr.warning("Preencha todos os campos", "Cadastro")
+      }
   }
-
 }
+
