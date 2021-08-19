@@ -60,7 +60,8 @@ import { MatCardModule } from '@angular/material/card';
       timeOut: 4000,
       closeButton: true,
       progressBar: true,
-      positionClass: 'toast-top-center'
+      positionClass: 'toast-top-center',
+      preventDuplicates: true
     }),
     NgxMaskModule.forRoot()
   ],
