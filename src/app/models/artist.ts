@@ -3,8 +3,8 @@ export interface Artist {
    name:     string;
    cpf:      string;
    phone:    string;
-   mail:     string;
+   email:    string;
    password: string;
-   about:    string;
+   about?:   string;
    age?:     number;
 }

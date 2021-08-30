@@ -11,6 +11,7 @@
       <mat-form-field appearance="outline">
          <mat-label>Nome</mat-label>
          <input 
+         [(ngModel)]="artist.name"
          [formControl]="name"
          name="name"
          required
@@ -24,6 +25,7 @@
       <mat-form-field appearance="outline">
          <mat-label>CPF</mat-label>
          <input 
+         [(ngModel)]="artist.cpf"
          [formControl]="cpf"
          name="cpf"
          required
@@ -37,6 +39,7 @@
       <mat-form-field appearance="outline">
          <mat-label>Telefone</mat-label>
          <input 
+         [(ngModel)]="artist.phone"
          [formControl]="phone"
          name="phone"
          required
@@ -50,7 +53,8 @@
       <mat-form-field appearance="outline">
          <mat-label>E-mail</mat-label>
          <input 
-         [formControl]="mail"
+         [(ngModel)]="artist.email"
+         [formControl]="email"
          name="mail"
          required
          type="text" 
@@ -62,6 +66,7 @@
       <mat-form-field appearance="outline">
          <mat-label>Senha</mat-label>
          <input 
+         [(ngModel)]="artist.password"
          [formControl]="password"
          name="password"
          required
@@ -73,7 +78,7 @@
       </mat-form-field>
 
 
-      <button (click)="validFields()" id="btn_entrar" class="mat-elevation-z2" mat-flat-button color="primary">Cadastrar</button>
+      <button (click)="create()" id="btn_entrar" class="mat-elevation-z2" mat-flat-button color="primary">Cadastrar</button>
       <button mat-stroked-button class="mat-elevation-z2" color="warn">Cancelar</button>
 
    </div>
