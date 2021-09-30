@@ -40,7 +40,7 @@ export class SignupComponent implements OnInit {
       this.service.create(this.artist).subscribe(() => {
         this.toast.success('Usuário cadastrado com sucesso!')
       }, err => {
-        this.toast.error(err.error)
+        this.toast.error(err.error.message)
       })
     }
   }
