@@ -27,12 +27,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { LoginComponent } from './components/login/login.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
