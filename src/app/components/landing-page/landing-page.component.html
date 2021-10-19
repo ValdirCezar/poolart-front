@@ -33,10 +33,10 @@
         <form>
           <mat-form-field appearance="outline">
             <mat-label>Encontre um Artista</mat-label>
-            <input matInput placeholder="Ex.: Valdir Cezar" />
-            <mat-icon (click)="search()" color="primary" matSuffix
-              >search</mat-icon
-            >
+            <input matInput [type]="'text'" />
+            <button mat-icon-button matSuffix>
+              <mat-icon>search</mat-icon>
+            </button>
           </mat-form-field>
         </form>
       </div>

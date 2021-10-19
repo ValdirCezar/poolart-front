@@ -58,6 +58,12 @@
 
 .search mat-icon {
   font-weight: bolder;
+  margin-right: 2rem;
+}
+
+.artist img {
+  -webkit-filter: drop-shadow(2px 2px 2px rgb(68, 67, 67));
+  filter: drop-shadow(2px 2px 2px rgb(98, 98, 98));
 }
 
 .artist {

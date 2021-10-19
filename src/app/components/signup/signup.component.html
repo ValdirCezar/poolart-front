@@ -1,86 +1,125 @@
 <div class="container">
+  <svg id="img-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path
+      fill="#f3f4f5"
+      fill-opacity="1"
+      d="M0,64L120,58.7C240,53,480,43,720,74.7C960,107,1200,181,1320,218.7L1440,256L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+    ></path>
+  </svg>
 
-   <div class="img-wrapper">
-      <img src="../../../assets/img/jq2.jpg" alt="Jota Quest">
-   </div>
+  <div class="header">
+    <div class="logo">
+      <a mat-button href="">
+        <img src="assets/img/logo.png" alt="Pool Art logo" />
+      </a>
+    </div>
+  </div>
 
-   <div class="rigth">
+  <div class="rigth">
+    <h1>Novo Cadastro</h1>
 
-      <h1>Novo Cadastro</h1>
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input
+        [(ngModel)]="artist.name"
+        [formControl]="name"
+        name="name"
+        required
+        maxlength="50"
+        type="text"
+        matInput
+        placeholder="Ex.. Fulado da Silva"
+      />
+      <mat-icon matSuffix>drive_file_rename_outline</mat-icon>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-         <mat-label>Nome</mat-label>
-         <input 
-         [(ngModel)]="artist.name"
-         [formControl]="name"
-         name="name"
-         required
-         maxlength="50"
-         type="text" 
-         matInput 
-         placeholder="Ex.. Fulado da Silva">
-         <mat-icon matSuffix>drive_file_rename_outline</mat-icon>
-      </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>CPF</mat-label>
+      <input
+        [(ngModel)]="artist.cpf"
+        [formControl]="cpf"
+        name="cpf"
+        required
+        type="text"
+        matInput
+        mask="000.000.000-00"
+        placeholder="Ex.. 000.000.000-00"
+      />
+      <mat-icon matSuffix>fingerprint</mat-icon>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-         <mat-label>CPF</mat-label>
-         <input 
-         [(ngModel)]="artist.cpf"
-         [formControl]="cpf"
-         name="cpf"
-         required
-         type="text" 
-         matInput 
-         mask="000.000.000-00"
-         placeholder="Ex.. 000.000.000-00">
-         <mat-icon matSuffix>fingerprint</mat-icon>
-      </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Telefone</mat-label>
+      <input
+        [(ngModel)]="artist.phone"
+        [formControl]="phone"
+        name="phone"
+        required
+        type="text"
+        matInput
+        mask="(00) 00000-0000"
+        placeholder="Ex.. (99) 99999-9999"
+      />
+      <mat-icon matSuffix>phone_android</mat-icon>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-         <mat-label>Telefone</mat-label>
-         <input 
-         [(ngModel)]="artist.phone"
-         [formControl]="phone"
-         name="phone"
-         required
-         type="text" 
-         matInput
-         mask="(00) 00000-0000"
-         placeholder="Ex.. (99) 99999-9999">
-         <mat-icon matSuffix>phone_android</mat-icon>
-      </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>E-mail</mat-label>
+      <input
+        [(ngModel)]="artist.email"
+        [formControl]="email"
+        name="mail"
+        required
+        type="text"
+        matInput
+        placeholder="Ex.. fulano@email.com"
+      />
+      <mat-icon matSuffix>mail_outline</mat-icon>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-         <mat-label>E-mail</mat-label>
-         <input 
-         [(ngModel)]="artist.email"
-         [formControl]="email"
-         name="mail"
-         required
-         type="text" 
-         matInput 
-         placeholder="Ex.. fulano@email.com">
-         <mat-icon matSuffix>mail_outline</mat-icon>
-      </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Senha</mat-label>
+      <input
+        [(ngModel)]="artist.password"
+        [formControl]="password"
+        name="password"
+        required
+        maxlength="50"
+        type="password"
+        matInput
+        placeholder="Ex.. 123456"
+      />
+      <mat-icon matSuffix>password</mat-icon>
+    </mat-form-field>
 
-      <mat-form-field appearance="outline">
-         <mat-label>Senha</mat-label>
-         <input 
-         [(ngModel)]="artist.password"
-         [formControl]="password"
-         name="password"
-         required
-         maxlength="50"
-         type="password" 
-         matInput 
-         placeholder="Ex.. 123456">
-         <mat-icon matSuffix>password</mat-icon>
-      </mat-form-field>
+    <button
+      (click)="create()"
+      id="btn_entrar"
+      class="mat-elevation-z2"
+      mat-flat-button
+      color="primary"
+    >
+      Cadastrar
+    </button>
+    <button
+      routerLink="../"
+      mat-stroked-button
+      class="mat-elevation-z2"
+      color="warn"
+    >
+      Cancelar
+    </button>
+  </div>
 
-
-      <button (click)="create()" id="btn_entrar" class="mat-elevation-z2" mat-flat-button color="primary">Cadastrar</button>
-      <button routerLink="../" mat-stroked-button class="mat-elevation-z2" color="warn">Cancelar</button>
-
-   </div>
-
-</div>±
+  <svg
+    id="img-bottom"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+  >
+    <path
+      fill="#f3f4f5"
+      fill-opacity="1"
+      d="M0,160L120,186.7C240,213,480,267,720,288C960,309,1200,299,1320,293.3L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+    ></path>
+  </svg>
+</div>
