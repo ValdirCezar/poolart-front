@@ -12,4 +12,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  search(): void {
+    console.log('Clicou em pesquisar');
+    
+  }
+
 }
