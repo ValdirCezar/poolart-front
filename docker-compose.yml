@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  poolart:
+    image: poolart
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 4200:4200
