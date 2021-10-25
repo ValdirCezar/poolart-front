@@ -36,6 +36,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void { }
 
   create(): void {
+    console.log('cadastrou');
     if(this.validFields()) {
       this.service.create(this.artist).subscribe(() => {
         this.toast.success('Usuário cadastrado com sucesso!')

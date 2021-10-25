@@ -29,6 +29,7 @@
    flex-direction: column;
    justify-content: center;
    animation: myAnim 2s ease 0s 1 normal forwards;
+   z-index: 1;
 }
 
 mat-form-field, button {
