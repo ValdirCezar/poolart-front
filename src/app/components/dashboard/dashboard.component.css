@@ -1,0 +1,46 @@
+.header {
+    height: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.presentation {
+    width: 80%;
+    margin: auto;
+}
+
+.logo img {
+    height: 3rem;
+}
+
+.menu button {
+    font-size: 1.1rem;
+    width: 33%;
+    text-align: end;
+}
+
+.menu .mat-stroked-button {
+    border-left: 4px solid;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+}
+
+.search mat-form-field {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.search mat-icon {
+    font-weight: bolder;
+    margin-right: 2rem;
+}
+
+svg {
+    position: fixed;
+    bottom: 0;
+}
