@@ -1,0 +1,15 @@
+.logo img {
+    height: 2rem;
+}
+
+.logo a {
+    padding: 0;
+}
+
+#dialog-title {
+    opacity: .7;
+}
+
+#signup-img {
+    height: 25rem;
+}
