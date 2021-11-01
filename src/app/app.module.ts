@@ -32,6 +32,7 @@ import { SignupComponent } from "./components/signup/signup.component";
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 import { AboutComponent } from './components/about/about.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LandingPageComponent,
     AboutComponent,
     DashboardComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
