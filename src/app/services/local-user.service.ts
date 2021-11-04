@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Artist } from '../models/user';
+import { Artist, User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,10 @@ export class LocalUserService {
   constructor() { }
 
   setLocalArtist(artist: Artist) {
-    localStorage.setItem('artist', JSON.stringify(artist));
+    localStorage.setItem('user', JSON.stringify(artist));
+  }
+
+  getLocalUser(): User {
+    return JSON.parse(localStorage.getItem('user'))
   }
 }

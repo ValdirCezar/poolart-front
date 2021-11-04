@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { AuthService } from "src/app/services/auth.service";
 import { Artist } from "../../models/user";
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { LocalUserService } from '../../services/local-user.service';
 
 @Component({
   selector: "app-dashboard",
@@ -12,7 +13,7 @@ export class DashboardComponent implements OnInit {
 
   user: Artist = {
     id: "",
-    name: "Valdir",
+    name: "",
     cpf: "",
     phone: "",
     email: "",
@@ -21,11 +22,17 @@ export class DashboardComponent implements OnInit {
     age: 0,
   };
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private localUserService: LocalUserService
+    ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getUser();
+  }
 
-  getUsername() {
+  getUser() {
+    this.user = this.localUserService.getLocalUser();
   }
 
   logout() {
