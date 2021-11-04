@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { cpf } from 'cpf-cnpj-validator';
-import { Artist } from 'src/app/models/artist';
+import { Artist } from 'src/app/models/user';
 import { ArtistService } from 'src/app/services/artist.service';
 
 @Component({

@@ -1,0 +1,15 @@
+.card {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.header-image {
+  background-image: url("../../../assets/img/valdir.jpeg");
+  background-size: cover;
+}
+
+.img img {
+  height: 16rem;
+  width: 100%;
+  text-align: center;
+}

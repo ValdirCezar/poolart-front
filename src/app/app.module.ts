@@ -34,6 +34,7 @@ import { AboutComponent } from './components/about/about.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { AuthInterceptorProvider } from "./interceptors/auth_interceptor";
 
 @NgModule({
   declarations: [
@@ -80,7 +81,9 @@ import { HomeComponent } from './components/home/home.component';
     }),
     NgxMaskModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    AuthInterceptorProvider,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
