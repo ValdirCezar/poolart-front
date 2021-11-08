@@ -27,15 +27,15 @@ import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
 
 import { AppComponent } from "./app.component";
-import { LoginComponent } from "./components/login/login.component";
-import { SignupComponent } from "./components/signup/signup.component";
+import { LoginComponent } from "./components/auth/login/login.component";
+import { SignupComponent } from "./components/user/signup/signup.component";
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 import { AboutComponent } from './components/about/about.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthInterceptorProvider } from "./interceptors/auth_interceptor";
-import { PerfilComponent } from './components/perfil/perfil.component';
+import { PerfilComponent } from './components/user/perfil/perfil.component';
 
 @NgModule({
   declarations: [

@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { ToastrService } from "ngx-toastr";
 import { FormControl, Validators } from "@angular/forms";
-import { Credentials } from "../../models/credentials";
-import { AuthService } from "../../services/auth.service";
+import { Credentials } from "../../../models/credentials";
+import { AuthService } from "../../../services/auth.service";
 import { Router } from "@angular/router";
 import { ArtistService } from "src/app/services/artist.service";
-import { LocalUserService } from "../../services/local-user.service";
+import { LocalUserService } from "../../../services/local-user.service";
 import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Component({
