@@ -35,6 +35,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthInterceptorProvider } from "./interceptors/auth_interceptor";
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AuthInterceptorProvider } from "./interceptors/auth_interceptor";
     DashboardComponent,
     HeaderComponent,
     HomeComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,
