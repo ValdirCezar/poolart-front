@@ -54,6 +54,7 @@
 .search mat-form-field {
   margin-top: 1rem;
   width: 80%;
+  z-index: 2;
 }
 
 .search mat-icon {

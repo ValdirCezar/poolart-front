@@ -33,9 +33,9 @@
         <form>
           <mat-form-field appearance="outline">
             <mat-label>Encontre um Artista</mat-label>
-            <input matInput [type]="'text'" />
+            <input [(ngModel)]="name" name="name" matInput [type]="'text'" />
             <button mat-icon-button matSuffix>
-              <mat-icon>search</mat-icon>
+              <mat-icon (click)="search()">search</mat-icon>
             </button>
           </mat-form-field>
         </form>
