@@ -4,6 +4,8 @@ import { ToastrService } from 'ngx-toastr';
 import { cpf } from 'cpf-cnpj-validator';
 import { Artist } from 'src/app/models/user';
 import { ArtistService } from 'src/app/services/artist.service';
+import { Route } from '@angular/compiler/src/core';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -32,7 +34,8 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private toast: ToastrService,
-    private service: ArtistService) { }
+    private service: ArtistService,
+    private router: Router) { }
 
   name: FormControl  = new FormControl(null, Validators.required)
   cpf: FormControl   = new FormControl(null, Validators.required)
@@ -53,7 +56,8 @@ export class SignupComponent implements OnInit {
     console.log('cadastrou');
     if(this.validFields()) {
       this.service.create(this.artist).subscribe(() => {
-        this.toast.success('Usuário cadastrado com sucesso!')
+        this.toast.success('Usuário cadastrado com sucesso!');
+        this.router.navigate(['../'])
       }, err => {
         this.toast.error(err.error.message)
       })
