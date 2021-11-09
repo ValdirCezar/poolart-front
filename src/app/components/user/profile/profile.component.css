@@ -1,0 +1,48 @@
+.container {
+    width: 35rem;
+    margin: 3rem auto;
+    padding: 1rem;
+    border-radius: .6rem;
+ }
+ 
+ .fullWidth {
+    width: 100%;
+ }
+ 
+.cpf-age {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cpf-age mat-form-field {
+    width: 32%;
+}
+ 
+ h1, p {
+    text-align: center;
+ }
+ 
+ .section {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ button {
+    margin-top: .5rem;
+ }
+ 
+ p {
+    margin-top: 4rem;
+    opacity: .5;
+ }
+ 
+ mat-icon {
+    opacity: .8;
+ }
+
+ textarea {
+     min-height: 5rem;
+ }
