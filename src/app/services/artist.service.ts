@@ -22,4 +22,14 @@ export class ArtistService {
     return this.http.get<Artist>(url);
   }
 
+  findById(id: string): Observable<Artist> {
+    const url = `${this.BASE_URL}/${id}`;
+    return this.http.get<Artist>(url);
+  }
+
+  update(artist: Artist): Observable<Artist> {
+    const url = `${this.BASE_URL}/${artist.id}`;
+    return this.http.put<Artist>(url, artist);
+  }
+
 }

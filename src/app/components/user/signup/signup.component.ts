@@ -13,14 +13,21 @@ import { ArtistService } from 'src/app/services/artist.service';
 export class SignupComponent implements OnInit {
 
   artist: Artist = {
-    id:       '',
     name:     '',
     cpf:      '',
     phone:    '',
     email:    '',
     password: '',
     about:    '',
-    age:      0
+    age:      0,
+    address: {
+      id: "",
+      cep: "",
+      country: "",
+      city: "",
+      street: "",
+      number: "",
+    }
   }
 
   constructor(
@@ -32,6 +39,13 @@ export class SignupComponent implements OnInit {
   phone: FormControl = new FormControl(null, Validators.required)
   email: FormControl = new FormControl(null, Validators.email)
   password: FormControl = new FormControl(null, [Validators.minLength(5), Validators.maxLength(50)])
+  age: FormControl = new FormControl(null, Validators.required)
+  about: FormControl = new FormControl(null, Validators.required)
+  cep: FormControl = new FormControl(null, Validators.required)
+  country: FormControl = new FormControl(null, Validators.required)
+  city: FormControl = new FormControl(null, Validators.required)
+  street: FormControl = new FormControl(null, Validators.required)
+  number: FormControl = new FormControl(null, Validators.required)
 
   ngOnInit(): void { }
 
@@ -53,17 +67,35 @@ export class SignupComponent implements OnInit {
     } else if (this.name.invalid) {
       this.toast.warning("O campo NOME deve ter entre 3 e 50 caracteres", "Nome")
       return false
-    } else if (this.cpf.invalid) {
-      this.toast.warning("O campo CPF deve ser preenchido", "CPF")
-      return false
     } else if (this.phone.invalid) {
       this.toast.warning("O campo TELEFONE deve ser preenchido", "TELEFONE")
+      return false
+    } else if (this.about.invalid) {
+      this.toast.warning("O campo SOBRE deve ser preenchido", "SOBRE")
       return false
     } else if (this.email.invalid) {
       this.toast.warning("O campo E-MAIL deve ser preenchido", "E-MAIL")
       return false
     } else if (this.password.invalid) {
       this.toast.warning("O campo SENHA deve entre 6 e 50 caracteres", "SENHA")
+      return false
+    }else if (this.age.invalid) {
+      this.toast.warning("O campo IDADE deve ser preenchido", "IDADE")
+      return false
+    }else if (this.cep.invalid) {
+      this.toast.warning("O campo CEP deve ser preenchido", "CEP")
+      return false
+    }else if (this.country.invalid) {
+      this.toast.warning("O campo PAIS deve ser preenchido", "PAIS")
+      return false
+    }else if (this.city.invalid) {
+      this.toast.warning("O campo CIDADE deve ser preenchido", "CIDADE")
+      return false
+    }else if (this.street.invalid) {
+      this.toast.warning("O campo LOGRADOURO deve ser preenchido", "LOGRADOURO")
+      return false
+    }else if (this.number.invalid) {
+      this.toast.warning("O campo NÚMERO deve ser preenchido", "NÚMERO")
       return false
     }
     return true
