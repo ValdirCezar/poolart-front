@@ -16,9 +16,7 @@ export class UserService {
 
   findNumberOfUserByName(name: string): Observable<number> {
     const url = `${this.BASE_URL}/users/find-all-with-name/${name}`
-    console.log(url);
-    
     return this.http.get<number>(url);
   }
-  
+
 }

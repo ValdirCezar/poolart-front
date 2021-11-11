@@ -1,4 +1,8 @@
 <div class="container">
+
+  <!-- <input class="ng-hide" id="input-file-id" multiple type="file" />
+  <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label> -->
+
   <mat-drawer-container class="drawer-container" autosize>
     <button
       class="menu mat-elevation-z8"
@@ -9,8 +13,11 @@
     </button>
     <mat-drawer #drawer class="sidenav mat-elevation-z8" mode="side">
       <div class="img-user">
-        <img src="../../../assets/img/valdir.jpeg" alt="Usuario" />
+        <img src="{{ getUserImage() }}" alt="Usuario" />
       </div>
+
+      <button class="ng-hide" id="alter-image" mat-button>Alterar imagem</button>
+
       <h3>{{ user.email }}</h3>
       <mat-nav-list class="nav-list">
         <a mat-list-item routerLink="home">
@@ -41,11 +48,4 @@
     </div>
   </mat-drawer-container>
 
-  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path
-      fill="#0099ff"
-      fill-opacity="1"
-      d="M0,320L1440,256L1440,320L0,320Z"
-    ></path>
-  </svg> -->
 </div>

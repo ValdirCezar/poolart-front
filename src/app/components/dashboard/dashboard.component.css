@@ -12,6 +12,7 @@
     margin: auto;
 }
 
+
 .presentation {
     width: 80%;
     margin: auto;
@@ -51,6 +52,11 @@
     margin-left: 2rem;
     margin-top: 1rem;
     border-radius: 5rem;
+}
+
+#alter-image {
+    width: 100%;
+    font-size: .7rem;
 }
 
 .sidenav h3 {

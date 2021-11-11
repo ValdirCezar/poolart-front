@@ -1,8 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "src/app/services/auth.service";
 import { Artist } from "../../models/user";
-import { JwtHelperService } from '@auth0/angular-jwt';
 import { LocalUserService } from '../../services/local-user.service';
+import { UserService } from '../../services/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "app-dashboard",
@@ -24,18 +25,26 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private localUserService: LocalUserService
+    private localUserService: LocalUserService,
+    private userService: UserService,
+    private toast: ToastrService
     ) {}
 
   ngOnInit(): void {
     this.getUser();
   }
 
-  getUser() {
+  getUser(): void {
     this.user = this.localUserService.getLocalUser();
   }
 
-  logout() {
+  logout(): void {
     this.authService.logout();
   }
+
+  getUserImage() {
+    const id = this.localUserService.getLocalUser().id;
+    return `https://poolart.s3.amazonaws.com/cp${id}.jpg`;
+  }
+
 }
