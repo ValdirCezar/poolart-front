@@ -13,10 +13,10 @@
     </button>
     <mat-drawer #drawer class="sidenav mat-elevation-z8" mode="side">
       <div class="img-user">
-        <img src="{{ getUserImage() }}" alt="Usuario" />
+        <img src="https://poolart.s3.amazonaws.com/cp1.jpg" onerror="this.src='assets/img/avatar.jpeg'">
       </div>
 
-      <button class="ng-hide" id="alter-image" mat-button>Alterar imagem</button>
+      <button (click)="alterImage()" class="ng-hide" id="alter-image" mat-button>Alterar imagem</button>
 
       <h3>{{ user.email }}</h3>
       <mat-nav-list class="nav-list">

@@ -21,9 +21,9 @@ export class FileUploadComponent implements OnInit {
   inputFileChange(event: any) {
     if (event.target.files && event.target.files[0]) {
       const foto = event.target.files[0];
-      this.router.navigate(["../dashboard/home"]);
       this.fileService.upload(foto).subscribe(
         () => {
+          this.router.navigate(["../dashboard/home"]);
           this.toast.success("Imagem atualizada com sucesso!");
         },
         (err) => {

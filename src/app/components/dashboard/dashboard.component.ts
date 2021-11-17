@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "src/app/services/auth.service";
 import { Artist } from "../../models/user";
-import { LocalUserService } from '../../services/local-user.service';
-import { UserService } from '../../services/user.service';
-import { ToastrService } from 'ngx-toastr';
+import { LocalUserService } from "../../services/local-user.service";
+import { MatDialog } from "@angular/material/dialog";
+import { FileUploadComponent } from "../file-upload/file-upload.component";
 
 @Component({
   selector: "app-dashboard",
@@ -26,9 +26,8 @@ export class DashboardComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private localUserService: LocalUserService,
-    private userService: UserService,
-    private toast: ToastrService
-    ) {}
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.getUser();
@@ -42,9 +41,11 @@ export class DashboardComponent implements OnInit {
     this.authService.logout();
   }
 
-  getUserImage() {
-    const id = this.localUserService.getLocalUser().id;
-    return `https://poolart.s3.amazonaws.com/cp${id}.jpg`;
+  getUserId() {
+    return this.localUserService.getLocalUser().id;
   }
 
+  alterImage(): void {
+    this.dialog.open(FileUploadComponent);
+  }
 }
