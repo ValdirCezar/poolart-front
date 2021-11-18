@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
         if (email != null) {
           this.artistService.getByEmail(email).subscribe((res) => {
             this.localUserService.setLocalArtist(res);
-            this.router.navigate(["../dashboard/home"]);
+            this.router.navigate(["../dashboard/find"]);
           });
         }
       },

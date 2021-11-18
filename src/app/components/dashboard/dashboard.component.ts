@@ -4,6 +4,7 @@ import { Artist } from "../../models/user";
 import { LocalUserService } from "../../services/local-user.service";
 import { MatDialog } from "@angular/material/dialog";
 import { FileUploadComponent } from "../file-upload/file-upload.component";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-dashboard",
