@@ -38,6 +38,8 @@ import { AuthInterceptorProvider } from "./interceptors/auth_interceptor";
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { FindComponent } from './components/find/find.component';
 
+import { NgRatingBarModule } from "ng-rating-bar";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,6 +86,7 @@ import { FindComponent } from './components/find/find.component';
       preventDuplicates: true,
     }),
     NgxMaskModule.forRoot(),
+    NgRatingBarModule
   ],
   providers: [
     AuthInterceptorProvider,

@@ -1,0 +1,18 @@
+.header {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.header img {
+  height: 10rem;
+}
+
+.search .form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: 100%;
+}
