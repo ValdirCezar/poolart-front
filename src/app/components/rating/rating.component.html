@@ -1,28 +1,47 @@
 <div class="container">
-
   <div class="img-rating">
     <img src="assets/img/rating.svg" alt="rating image" />
   </div>
 
   <div class="rating">
-    <ng-rating-bar [value]="rating" [ratingCount]="5"></ng-rating-bar>
+    <ng-rating-bar [(value)]="stars" [ratingCount]="5"></ng-rating-bar>
   </div>
 
   <div class="coment">
     <h1>Chegou a hora de avaliar nosso amigo Valdir Cezar</h1>
-    <h4>Atênção, sua avaliação irá impactar diretamente na forma em que recomendamos esse profissional</h4>
+    <h4>
+      Atênção, sua avaliação irá impactar diretamente na forma em que
+      recomendamos esse profissional
+    </h4>
     <form class="form">
       <mat-form-field class="full-width" appearance="outline">
         <mat-label>Deixe um comentário</mat-label>
-        <textarea matInput placeholder="Ex. O valdir cantou ragatanga..." maxlength="255"></textarea>
+        <textarea
+          matInput
+          placeholder="Ex. O valdir cantou ragatanga..."
+          maxlength="255"
+        ></textarea>
       </mat-form-field>
-      <button (click)="sendRating()" class="full-width mat-elevation-z1" mat-stroked-button color="primary">Enviar avaliação</button>
-      <button routerLink="../../find" class="full-width mat-elevation-z1" mat-stroked-button color="warn">Cancelar avaliação</button>
+      <button
+        (click)="sendRating()"
+        class="full-width mat-elevation-z1"
+        mat-stroked-button
+        color="primary"
+      >
+        Enviar avaliação
+      </button>
+      <button
+        routerLink="../../find"
+        class="full-width mat-elevation-z1"
+        mat-stroked-button
+        color="warn"
+      >
+        Cancelar avaliação
+      </button>
     </form>
   </div>
 
   <div class="full-width footer">
-      <p>By Senai Coders</p>
+    <p>By Senai Coders</p>
   </div>
-
 </div>

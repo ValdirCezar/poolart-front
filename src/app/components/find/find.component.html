@@ -5,17 +5,28 @@
 
   <div class="search">
     <form class="form">
-      <button (click)="findAll()" mat-stroked-button color="primary">Buscar</button>
+      <button (click)="findAll()" mat-stroked-button color="primary">
+        Buscar
+      </button>
       <mat-form-field appearance="outline">
         <mat-label>Encontrar alguém</mat-label>
         <!-- <span matPrefix>+1 &nbsp;</span> -->
         <input
           [(ngModel)]="name"
           name="name"
-          required
           type="text"
           matInput
           placeholder="Fulano de tal..."
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="Ex. ium"
+          #input
         />
       </mat-form-field>
     </form>
@@ -53,7 +64,11 @@
         <ng-container matColumnDef="evaluate">
           <th mat-header-cell *matHeaderCellDef>Avaliar</th>
           <td mat-cell *matCellDef="let element">
-            <button routerLink="../rating/{{ element.id }}" mat-icon-button color="warn">
+            <button
+              routerLink="../rating/{{ element.id }}"
+              mat-icon-button
+              color="warn"
+            >
               <mat-icon>favorite</mat-icon>
             </button>
           </td>
