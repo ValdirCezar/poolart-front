@@ -1,5 +1,4 @@
 <div class="container">
-
   <!-- <input class="ng-hide" id="input-file-id" multiple type="file" />
   <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label> -->
 
@@ -13,16 +12,30 @@
     </button>
     <mat-drawer #drawer class="sidenav mat-elevation-z8" mode="side">
       <div class="img-user">
-        <img src="https://poolart.s3.amazonaws.com/cp1.jpg" onerror="this.src='assets/img/avatar.jpeg'">
+        <img
+          src="https://poolart.s3.amazonaws.com/cp1.jpg"
+          onerror="this.src='assets/img/avatar.jpeg'"
+        />
       </div>
 
-      <button (click)="alterImage()" class="ng-hide" id="alter-image" mat-button>Alterar imagem</button>
+      <button
+        (click)="alterImage()"
+        class="ng-hide"
+        id="alter-image"
+        mat-button
+      >
+        Alterar imagem
+      </button>
 
       <h3>{{ user.email }}</h3>
       <mat-nav-list class="nav-list">
         <a mat-list-item routerLink="home">
           <i class="material-icons">home</i>
-          Home
+          Início
+        </a>
+        <a mat-list-item routerLink="home">
+          <i class="material-icons">person_search</i>
+          Encontrar
         </a>
         <a mat-list-item routerLink="profile">
           <i class="material-icons">account_circle</i>
@@ -30,11 +43,11 @@
         </a>
         <a mat-list-item routerLink="dashboard">
           <i class="material-icons">person</i>
-          Meus prefreridos
+          Avaliações
         </a>
         <a (click)="logout()" routerLink="../" mat-list-item>
           <i class="material-icons">logout</i>
-          Logout
+          Sair
         </a>
       </mat-nav-list>
     </mat-drawer>
@@ -47,5 +60,4 @@
       <router-outlet></router-outlet>
     </div>
   </mat-drawer-container>
-
 </div>

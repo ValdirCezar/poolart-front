@@ -36,7 +36,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthInterceptorProvider } from "./interceptors/auth_interceptor";
 import { ProfileComponent } from './components/user/profile/profile.component';
-import { AboutMeComponent } from './components/user/about-me/about-me.component';
+import { FindComponent } from './components/find/find.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,7 @@ import { AboutMeComponent } from './components/user/about-me/about-me.component'
     HeaderComponent,
     HomeComponent,
     ProfileComponent,
-    AboutMeComponent,
+    FindComponent,
   ],
   imports: [
     BrowserModule,
