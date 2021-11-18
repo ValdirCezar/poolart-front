@@ -25,4 +25,9 @@ export class UserService {
     return this.http.get<User[]>(url);
   }
 
+  sendRating(idUser: any, rating: number): Observable<any> {
+    const url = `${this.BASE_URL}/reviews/${idUser}/${rating}`
+    return this.http.get<any>(url);
+  }
+
 }

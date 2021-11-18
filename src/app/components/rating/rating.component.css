@@ -1,0 +1,59 @@
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rating,
+.img-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-rating img {
+  height: 23rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.coment,
+.form {
+  margin-top: 0.6rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coment h1, h4,
+.footer p {
+  text-align: center;
+  font-weight: bolder;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.coment h4,
+.footer p {
+  opacity: 0.5;
+}
+
+.footer {
+    margin-top: 4rem;
+    opacity: .5;
+}
+
+textarea {
+  max-height: 6rem;
+  min-height: 4rem;
+}
+
+.form button {
+  margin-bottom: 0.3rem;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-rating',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RatingComponent implements OnInit {
 
-  constructor() { }
+  rating: number = 4;
+
+  constructor(
+    private userService: UserService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  sendRating(): void {
+    this.userService.sendRating(1, this.rating).subscribe(res => {
+      console.log(res);
+      
+    })
   }
 
 }
