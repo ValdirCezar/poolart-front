@@ -40,6 +40,7 @@ import { FindComponent } from './components/find/find.component';
 
 import { NgRatingBarModule } from "ng-rating-bar";
 import { RatingComponent } from './components/rating/rating.component';
+import { ContatarComponent } from './components/contatar/contatar.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { RatingComponent } from './components/rating/rating.component';
     ProfileComponent,
     FindComponent,
     RatingComponent,
+    ContatarComponent,
   ],
   imports: [
     BrowserModule,
