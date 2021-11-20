@@ -16,3 +16,19 @@
 table {
   width: 100%;
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contact img {
+  height: 7rem;
+}
+
+#menu-item-phone {
+  margin: 1rem;
+  color: rgb(2, 187, 125);
+  text-align: center;
+}

@@ -1,10 +1,10 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
 import { Artist, User } from "../../models/user";
 import { UserService } from "../../services/user.service";
-import { HttpEvent } from '@angular/common/http';
-
+import { ContatarComponent } from '../contatar/contatar.component';
 @Component({
   selector: "app-find",
   templateUrl: "./find.component.html",
@@ -14,6 +14,8 @@ export class FindComponent implements AfterViewInit, OnInit {
 
   name: string = ''
   ELEMENT_DATA: Artist[] = [];
+
+  phoneNumber: string;
 
   displayedColumns: string[] = [
     "name",
@@ -27,7 +29,10 @@ export class FindComponent implements AfterViewInit, OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private dialog: MatDialog
+    ) {}
 
   ngOnInit(): void { }
 
@@ -49,5 +54,5 @@ export class FindComponent implements AfterViewInit, OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-  
+
 }

@@ -77,7 +77,13 @@
         <ng-container matColumnDef="contact">
           <th mat-header-cell *matHeaderCellDef>Contato</th>
           <td mat-cell *matCellDef="let element">
-            <button mat-button color="primary">Contatar</button>
+            <button mat-button [matMenuTriggerFor]="menu">Contatar</button>
+            <mat-menu #menu="matMenu">
+              <div class="contact">
+                <img src="assets/img/phone.svg" alt="Contact img" />
+              </div>
+              <p id="menu-item-phone" mat-menu-item>{{ element.phone }}</p>
+            </mat-menu>
           </td>
         </ng-container>
 

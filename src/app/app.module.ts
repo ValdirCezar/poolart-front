@@ -24,23 +24,24 @@ import { MatRadioModule } from "@angular/material/radio";
 import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
+import { MatMenuModule } from "@angular/material/menu";
 import { MatCardModule } from "@angular/material/card";
 
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./components/auth/login/login.component";
 import { SignupComponent } from "./components/user/signup/signup.component";
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
-import { AboutComponent } from './components/about/about.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from "./components/about/about.component";
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { HeaderComponent } from "./components/shared/header/header.component";
+import { HomeComponent } from "./components/home/home.component";
 import { AuthInterceptorProvider } from "./interceptors/auth_interceptor";
-import { ProfileComponent } from './components/user/profile/profile.component';
-import { FindComponent } from './components/find/find.component';
+import { ProfileComponent } from "./components/user/profile/profile.component";
+import { FindComponent } from "./components/find/find.component";
 
 import { NgRatingBarModule } from "ng-rating-bar";
-import { RatingComponent } from './components/rating/rating.component';
-import { ContatarComponent } from './components/contatar/contatar.component';
+import { RatingComponent } from "./components/rating/rating.component";
+import { ContatarComponent } from "./components/contatar/contatar.component";
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { ContatarComponent } from './components/contatar/contatar.component';
     MatTableModule,
     MatIconModule,
     MatListModule,
+    MatMenuModule,
     MatCardModule,
     ToastrModule.forRoot({
       timeOut: 4000,
@@ -90,11 +92,9 @@ import { ContatarComponent } from './components/contatar/contatar.component';
       preventDuplicates: true,
     }),
     NgxMaskModule.forRoot(),
-    NgRatingBarModule
+    NgRatingBarModule,
   ],
-  providers: [
-    AuthInterceptorProvider,
-  ],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
