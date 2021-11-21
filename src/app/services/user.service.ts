@@ -30,4 +30,9 @@ export class UserService {
     return this.http.get<any>(url);
   }
 
+  findById(userId: any): Observable<User> {
+    const url = `${this.BASE_URL}/users/username/${userId}`
+    return this.http.get<User>(url);
+  }
+
 }

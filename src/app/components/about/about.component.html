@@ -1,17 +1,74 @@
 <div class="logo">
-    <a mat-button href="">
-      <img src="assets/img/logo.png" alt="Pool Art logo" />
-    </a>
-  </div>
-<h2 id="dialog-title" color="primary" mat-dialog-title>Como funciona nossa plataforma</h2>
+  <a mat-button href="">
+    <img src="assets/img/logo.png" alt="Pool Art logo" />
+  </a>
+</div>
+<h2 class="dialog-title" color="primary" mat-dialog-title>
+  Como funciona nossa plataforma
+</h2>
 <mat-dialog-content class="mat-typography">
-  <h3>Uma maneira mais simples de conectar artistas autônomos a bares, hotéis, restaurantes, etc.</h3>
-  <h3>1.º Você realiza o cadastro no sistema através do link 
-    <button routerLink="/signup" id="signup" mat-button color="primary">
-        Cadastrar-me
-      </button>
+  <h3>
+    Uma maneira mais simples de conectar artistas autônomos a bares, hotéis,
+    restaurantes, etc.
   </h3>
-  <img id="signup-img" src="assets/img/signup-img.png" alt="Signup image">
+
+  <br>
+  <h3 class="dialog-title">
+    1.º É possível realizar uma pesquisa mesmo estando deslogado, porém, para
+    conseguir o contato do artista <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; se faz necessário estar logado no sistema
+  </h3>
+  <img src="assets/img/about/ap-pesquisa-deslogado.png" alt="Inicio image" />
+
+  <br><br><br>
+  <h3 class="dialog-title">
+    2.º Você realiza o cadastro no sistema através do link
+    <button routerLink="/signup" id="signup" mat-button color="primary">
+      Cadastrar-me
+    </button>
+  </h3>
+  <img src="assets/img/about/ap-cadastro.png" alt="Signup image" />
+
+  <br><br><br>
+  <h3 class="dialog-title">
+    3.º Você realiza o login no sistema através do link
+    <button routerLink="/login" id="login" mat-button color="primary">
+      Logar
+    </button>
+  </h3>
+  <img src="assets/img/about/ap-cadastro.png" alt="Login image" />
+
+  <br><br><br>
+  <h3 class="dialog-title">
+    4.º Você se depara com a página de início do sistema onde teremos algumas
+    informações
+  </h3>
+  <img src="assets/img/about/ap-inicio.png" alt="Inicio image" />
+
+  <br><br><br>
+  <h3 class="dialog-title">
+    5.º Ao clicar em encontrar você poderá realizar a pesquisa de um artista
+  </h3>
+  <img src="assets/img/about/ap-encontrar.png" alt="Encontrar image" />
+
+  <br><br><br>
+  <h3 class="dialog-title">
+    6.º Você poderá realizar a avaliação do artista ou empresa
+  </h3>
+  <img src="assets/img/about/ap-avaliar.png" alt="Avaliar image" />
+
+  <br><br><br>
+  <h3 class="dialog-title">
+    7.º Você poderá realizar a avaliação do artista ou empresa
+  </h3>
+  <img src="assets/img/about/ap-avaliar2.png" alt="Avaliar image" />
+
+  <br><br><br>
+  <h3 class="dialog-title">
+    8.º Atualize suas informações através do link perfil
+  </h3>
+  <img src="assets/img/about/ap-perfil.png" alt="Avaliar image" />
+
+
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Entendi</button>

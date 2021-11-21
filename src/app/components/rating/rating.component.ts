@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "../../services/user.service";
 import { ToastrService } from "ngx-toastr";
 import { ActivatedRoute, Router } from "@angular/router";
+import { User } from '../../models/user';
 
 @Component({
   selector: "app-rating",
@@ -12,6 +13,7 @@ export class RatingComponent implements OnInit {
 
   stars = 0;
   userId: string = "0";
+  user: User;
 
   constructor(
     private userService: UserService,
@@ -22,6 +24,7 @@ export class RatingComponent implements OnInit {
 
   ngOnInit(): void {
     this.userId = this.route.snapshot.paramMap.get("id");
+    this.findById();
   }
 
   sendRating(): void {
@@ -39,5 +42,13 @@ export class RatingComponent implements OnInit {
         this.router.navigate(["../../find"]);
       }
     );
+  }
+
+  findById(): void {
+    this.userService.findById(this.userId).subscribe(res => {
+      this.user = res;
+    }, err => {
+      this.toastService.error(err.error.error);
+    })
   }
 }
